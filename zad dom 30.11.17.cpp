@@ -1,37 +1,38 @@
 #include <iostream>
-#include <math.h>
-#include <conio.h>
-#include <string>
-#include <cstdlib>
-#include <iomanip>
+#include <time.h>
+#include <cstdio>
+#include <stdlib.h>
 #include <windows.h>
+#include <iomanip>
+
+
 using namespace std;
 
-int main(){
-int ip, ipa, ipb, ipc;
-string ip1, ip2,ip3,ip4;
 
-cout<<"Podaj ip (zamiast kropek uzyj spacji): "<<endl;
-cin>>ip>>ipa>>ipb>>ipc;
-cout<<"podane ip to: "<<ip<<"."<<ipa<<"."<<ipb<<"."<<ipc<<endl;
-while(ip){
-        ip1 = (ip%2?"1":"0") + ip1;
-        ip /= 2;};
-while(ipa){
-        ip2 = (ipa%2?"1":"0") + ip2;
-        ipa /= 2;};
+int main()
 
-while(ipb){
-        ip3 = (ipb%2?"1":"0") + ip3;
-        ipb /= 2;};
-while(ipc){
-        ip4 = (ipc%2?"1":"0") + ip4;
-        ipc /= 2;};
-cout<<"\n";
-cout<<setfill('0')<<setw(8)<<ip1<<".";
-cout<<setfill('0')<<setw(8)<<ip2<<".";
-cout<<setfill('0')<<setw(8)<<ip3<<".";
-cout<<setfill('0')<<setw(8)<<ip4<<"."<<endl;
+{
 
-return 0;
+ int k;
+ string bin="";
+ cout<<"wpisz liczbe:";
+ cin>>k;
+
+cout<<" = " <<k<<endl;
+cout<<"konwersja systemow liczbowych: ";cout<<"\n";
+cout<<"\n szesnastkowy = "<<hex<<k<<endl;
+cout<<"\n osemkowy = "<<oct<<k<<endl;
+cout<<"\n dziesietny = "<<dec<<k<<endl;
+while (k!=0)
+    {
+        if (k%2==0){
+            bin="0"+bin;}
+            else
+            {
+                bin="1"+bin;}
+                k=k/2;
+    };
+    cout<<"\n binarny = "<<bin<<endl;
+
+  return 0;
 }
